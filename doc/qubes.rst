@@ -16,7 +16,7 @@ loading from XML file.
 
 The loading from XML is done in stages, because Qubes domains are dependent on
 each other in what can be even a circular dependency. Therefore some properties
-(especcialy those that refer to another domains) are loaded later.
+(especially those that refer to another domains) are loaded later.
 
 .. image:: loading.svg
 
@@ -41,11 +41,11 @@ default NetVM for all AppVMs. All of those *configurable* parameters are called
 Definition
 ^^^^^^^^^^
 Properties are defined on global :py:class:`qubes.Qubes` application object and
-on every domain. Those classess inherit from :py:class:`PropertyHolder` class,
+on every domain. Those classes inherit from :py:class:`PropertyHolder` class,
 which is responsible for operation of properties.
 
 Each Qubes property is actually a *data descriptor* (a Python term), which means
-they are attributes of their classess, but when trying to access it from
+they are attributes of their classes, but when trying to access it from
 *instance*, they return it's underlying value instead. They can be thought of as
 Python's builtin :py:class:`property`, but greatly enhanced. They are defined in
 definition of their class::
@@ -173,7 +173,7 @@ property::
    <NetVM ...>
 
 
-Setting netvm on particular domain of course does not affect global default, but
+Setting NetVM on particular domain of course does not affect global default, but
 only this instance. But there are two problems:
 
 - You don't know if the value of the property you just accessed was it's
@@ -205,7 +205,7 @@ distinguish unset from set properties::
 
 Inheritance
 ^^^^^^^^^^^
-Properties in subclassess overload properties from their parents, like
+Properties in subclasses overload properties from their parents, like
 expected::
 
    >>> import qubes
